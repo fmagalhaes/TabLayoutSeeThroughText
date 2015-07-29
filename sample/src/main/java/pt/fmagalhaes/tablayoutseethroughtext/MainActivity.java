@@ -22,20 +22,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TabLayoutSeeThroughText tabLayoutPlus = (TabLayoutSeeThroughText) findViewById(R.id.tablayout);
+        TabLayoutSeeThroughText tabLayout = (TabLayoutSeeThroughText) findViewById(R.id.tablayout);
         ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
 
         if(getSupportActionBar() != null)
             getSupportActionBar().setElevation(0f);
-        ViewCompat.setElevation(tabLayoutPlus, TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 4, getResources().getDisplayMetrics()));
+        ViewCompat.setElevation(tabLayout, TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 4, getResources().getDisplayMetrics()));
 
         ViewPagerSimpleAdapter adapter = new ViewPagerSimpleAdapter(getSupportFragmentManager());
         viewPager.setAdapter(adapter);
 
-        tabLayoutPlus.setDistributeEvenly(true);
+        tabLayout.setDistributeEvenly(true);
 
-        tabLayoutPlus.setNotSelectedTextColor(Color.parseColor("#BBBBBB"));
-        tabLayoutPlus.setCustomTabColorizer(new TabLayoutSeeThroughText.TabColorizer() {
+        tabLayout.setNotSelectedTextColor(Color.parseColor("#BBBBBB"));
+        tabLayout.setCustomTabColorizer(new TabLayoutSeeThroughText.TabColorizer() {
             @Override
             public int getIndicatorColor(int position) {
                 return Color.RED;
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 //        Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/Corbel-Bold.ttf");
 //        mTabLayoutPlus.setTypeface(tf);
 
-        tabLayoutPlus.setViewPager(viewPager);
+        tabLayout.setViewPager(viewPager);
     }
 
 

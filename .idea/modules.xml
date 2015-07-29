@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/TabLayoutSeeThroughText.iml" filepath="$PROJECT_DIR$/TabLayoutSeeThroughText.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TabLayoutSeeThroughTextLib.iml" filepath="$PROJECT_DIR$/TabLayoutSeeThroughTextLib.iml" />
       <module fileurl="file://$PROJECT_DIR$/sample/sample.iml" filepath="$PROJECT_DIR$/sample/sample.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/sample.iml" filepath="$PROJECT_DIR$/app/sample.iml" />
       <module fileurl="file://$PROJECT_DIR$/tablayoutseethroughtextlib/tablayoutseethroughtextlib.iml" filepath="$PROJECT_DIR$/tablayoutseethroughtextlib/tablayoutseethroughtextlib.iml" />
     </modules>
   </component>
