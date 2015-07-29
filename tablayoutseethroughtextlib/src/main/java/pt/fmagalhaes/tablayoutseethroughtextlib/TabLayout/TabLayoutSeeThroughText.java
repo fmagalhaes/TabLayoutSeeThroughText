@@ -6,7 +6,6 @@ import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.LayerDrawable;
-import android.support.annotation.ColorInt;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
@@ -45,9 +44,9 @@ public class TabLayoutSeeThroughText extends HorizontalScrollView {
         /**
          * @return return the color of the indicator used when {@code position} is selected.
          */
-        @ColorInt int getIndicatorColor(int position);
+        int getIndicatorColor(int position);
 
-        @ColorInt int getTabColor(int position);
+        int getTabColor(int position);
     }
 
     private static final int TITLE_OFFSET_DIPS = 24;
@@ -91,7 +90,7 @@ public class TabLayoutSeeThroughText extends HorizontalScrollView {
         addView(mTabStrip, LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
     }
 
-    public void setNotSelectedTextColor(@ColorInt int color) {
+    public void setNotSelectedTextColor(int color) {
         setBackgroundColor(color);
     }
 
@@ -152,7 +151,7 @@ public class TabLayoutSeeThroughText extends HorizontalScrollView {
     }
 
     @SuppressWarnings("WeakerAccess")
-    protected View createDefaultTabView(Context context, @ColorInt int tabColor) {
+    protected View createDefaultTabView(Context context, int tabColor) {
         SeeThroughTextView textView = new SeeThroughTextView(context);
         textView.setGravity(Gravity.CENTER);
         textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, TAB_VIEW_TEXT_SIZE_SP);

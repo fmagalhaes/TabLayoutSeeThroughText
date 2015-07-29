@@ -2,7 +2,6 @@ package pt.fmagalhaes.tablayoutseethroughtextlib;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.annotation.AttrRes;
 import android.util.TypedValue;
 
 @SuppressWarnings("unused")
@@ -20,7 +19,7 @@ public class AttrUtils {
     }
 
     @SuppressWarnings("WeakerAccess")
-    public static int fetchAttrColor(@AttrRes int resId, Context context) {
+    public static int fetchAttrColor(int resId, Context context) {
         TypedValue typedValue = new TypedValue();
 
         TypedArray a = context.obtainStyledAttributes(typedValue.data, new int[]{resId});
